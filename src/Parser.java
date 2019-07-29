@@ -31,7 +31,12 @@ public class Parser {
         }
         strings = args[2].split("=");
         if (strings[0].equals("--content-type")){
-            configuration.setType(strings[1]);
+            if (strings[1].equals("s") || strings[1].equals("i")){
+                configuration.setType(strings[1]);
+            }else{
+                configuration.setCorrectly(false);
+                return configuration;
+            }
         }else{
             configuration.setCorrectly(false);
             return configuration;

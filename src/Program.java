@@ -19,8 +19,10 @@ public class Program {
 
             File workDir = configuration.getDir();
             File[] files = workDir.listFiles();
-            Sort sort = new Sort(configuration, files[0]);
-            sort.run();
+            if (files != null){
+                Sort sort = new Sort(configuration, files[0]);
+                sort.run();
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
