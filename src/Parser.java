@@ -43,7 +43,12 @@ public class Parser {
         }
         strings = args[3].split("=");
         if (strings[0].equals("--sort-mode")){
-            configuration.setMode(strings[1]);
+            if (strings[1].equals("a") || strings[1].equals("d")){
+                configuration.setMode(strings[1]);
+            }else{
+                configuration.setCorrectly(false);
+                return configuration;
+            }
         }else{
             configuration.setCorrectly(false);
             return configuration;

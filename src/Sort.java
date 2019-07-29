@@ -55,11 +55,9 @@ public class Sort implements Runnable {
             if (configuration.getMode().equals("d")){
                 res = SortStrD(strings, buf, 0, strings.length-1);
                 printToFile(res);
-                System.out.println(Arrays.toString(res));
             }else{
                 res = SortStrA(strings, buf, 0, strings.length-1);
                 printToFile(res);
-                System.out.println(Arrays.toString(res));
             }
         } catch (IOException e) {
             System.out.print("Error of reading file: ");
@@ -81,11 +79,9 @@ public class Sort implements Runnable {
             if (configuration.getMode().equals("d")){
                 res = SortIntD(numbers, buf, 0, numbers.length-1);
                 printToFile(res);
-                System.out.println(Arrays.toString(res));
             }else{
                 res = SortIntA(numbers, buf, 0, numbers.length-1);
                 printToFile(res);
-                System.out.println(Arrays.toString(res));
             }
         } catch (IOException e) {
             System.out.print("Error of reading file: ");
